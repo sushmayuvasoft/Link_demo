@@ -1,0 +1,11 @@
+
+<%= form_for(@user, url: users_path, method: :post) do |f| %>
+  <%= f.label :name %><br><br>
+  <%= f.text_field :name %><br><br>
+  <%= f.label :email %><br><br>
+  <%= f.email_field :email %><br><br>
+  <%= f.label :UploadImage %><br>
+  <%= f.file_field :avatar %><br><br>
+  <%= f.submit "Create", class: "btn-info" %>
+<% end %><br>
+

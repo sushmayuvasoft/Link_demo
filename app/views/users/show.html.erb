@@ -1,0 +1,9 @@
+<%= @user.name %>
+<%= @user.email %>
+<%= form_for @user do |f| %>
+  <p>
+    <label>Uploaded Image</label>
+    <%= image_tag(@user.avatar) if @user.avatar? %>
+    <%= f.file_field :avatar ,class:"img-circle", width:"304", height:"236" %>
+   </p>
+<% end %>
